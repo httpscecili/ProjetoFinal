@@ -8,7 +8,7 @@
 }
 
 body{
-    background-image: url('C:/Users/Aluno_Tarde/Cecília/ProjetoFinal/img/img login.png);
+    background-image: url('C:/Users/Aluno_Tarde/Cecília/ProjetoFinal/img/img login.png');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -152,9 +152,15 @@ body{
     height: 100%;
     overflow: hidden;
     transition: all 0.6 ease-in-out;
+    border-radius: 150px 0 0 100px;
     z-index: 1000;
 }
 
 .container-active .toggle-container{
    transform: translateX(-100%); 
+}
+
+.toggle{
+    background-color: #ffc6af;
+    height: 100%;
 }
