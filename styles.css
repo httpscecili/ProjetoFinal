@@ -8,13 +8,15 @@
 }
 
 body{
-    background-image: url('C:/Users/Aluno_Tarde/Cecília/ProjetoFinal/img/img login.png');
+    background-image: url(img/img\ login.png);
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    opacity: 0.8; 
+    z-index: 1;
 }
 
 .container{
