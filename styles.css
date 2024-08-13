@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 *{
     margin: 0;
@@ -8,8 +8,8 @@
 }
 
 body{
-    background-image: url('C:/Users/Aluno_Tarde/Cecília/ProjetoFinal/img/img login.png);
-    background-size: cover;
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,14 +18,14 @@ body{
 }
 
 .container{
-    background-color: transparent;
+    background-color: #fff;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-width: 480px;
+    min-height: 480px;
 }
 
 .container p{
@@ -47,8 +47,8 @@ body{
 }
 
 .container button{
-    background-color: #ffffff;
-    color: #ffc6af;
+    background-color: #512da8;
+    color: #fff;
     font-size: 12px;
     padding: 10px 45px;
     border: 1px solid transparent;
@@ -62,18 +62,18 @@ body{
 
 .container button.hidden{
     background-color: transparent;
-    border-color: #ffffff;
+    border-color: #fff;
 }
 
 .container form{
-    background-color: transparent;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 0 40px;
     height: 100%;
-} 
+}
 
 .container input{
     background-color: #eee;
@@ -99,7 +99,7 @@ body{
     z-index: 2;
 }
 
-.container-active .sign-in{
+.container.active .sign-in{
     transform: translateX(100%);
 }
 
@@ -110,7 +110,7 @@ body{
     z-index: 1;
 }
 
-.container-active .sign-up{
+.container.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -121,7 +121,6 @@ body{
     0%, 49.99%{
         opacity: 0;
         z-index: 1;
-
     }
     50%, 100%{
         opacity: 1;
@@ -151,10 +150,61 @@ body{
     width: 50%;
     height: 100%;
     overflow: hidden;
-    transition: all 0.6 ease-in-out;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
     z-index: 1000;
 }
 
-.container-active .toggle-container{
-   transform: translateX(-100%); 
+.container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+    background-color: #512da8;
+    height: 100%;
+    background: linear-gradient(to right, #5c6bc0, #512da8);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left{
+    transform: translateX(0);
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right{
+    transform: translateX(200%);
 }
